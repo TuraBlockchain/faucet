@@ -16,7 +16,7 @@
         field#faucet-address(
           type='text'
           v-model='fields.address'
-          placeholder='Testnet address'
+          placeholder='Mainnet address'
           size="lg")
         form-msg(name='Address' type='required' v-if='!$v.fields.address.required')
         form-msg(name='Address' type='bech32' :body="bech32error" v-else-if='!$v.fields.address.bech32Validate')
@@ -38,8 +38,6 @@ import Field from "@nylira/vue-field";
 import FormGroup from "../components/NiFormGroup";
 import FormMsg from "../components/NiFormMsg";
 import FaucetHeader from "../components/FaucetHeader";
-import SectionJoin from "../components/SectionJoin.vue";
-import SectionLinks from "../components/SectionLinks.vue";
 export default {
   name: "faucet",
   components: {
@@ -48,8 +46,6 @@ export default {
     FormGroup,
     FaucetHeader,
     FormMsg,
-    SectionJoin,
-    SectionLinks,
     VueRecaptcha
   },
   computed: {
