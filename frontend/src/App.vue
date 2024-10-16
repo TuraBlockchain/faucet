@@ -6,7 +6,7 @@
       .key mainnet:
       .value {{ config.chain }}
     .right
-      a(href="explorer.turablockchain.com" target="_blank") explorer #[i.material-icons assessment]
+      a(href="https://explorer.turablockchain.com" target="_blank") explorer #[i.material-icons assessment]
   img(src="~assets/brandmark.png" width="512" height="512")
   router-view
   notifications(:notifications='notifications' theme='cosmos')
